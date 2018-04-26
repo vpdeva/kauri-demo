@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+        <title>Dashboard</title>
+        <meta name="description" content="Love UI Kit." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/uport-connect/dist/uport-connect.js"></script>
+        <!--icons-->
+        <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../public/styles/components.css" />
+        <link rel="stylesheet" type="text/css" href="../public/styles/colors.css" />
+        <link rel="stylesheet" type="text/css" href="../public/styles/demo.css" />
+</head>
+
+<body>
+    <!--header-->
+        <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent sticky-navigation" style="background:#6200ea">
+
+            <div class="container" style="margin-left:0px">
+                <a class="navbar-brand" href="#">
+                    <img src="../public/img/logo-w61.png" class="nav-brand-logo" />
+                </a>
+                <h2>Please validate your details<h2>
+
+            </div>
+
+
+        </nav>
+
+<div class="col-sm-6" style="background-color:lavender;">
+    <p class="img-rounded">
+        <input type="image" href="#" width="100px" src="" onchange="setLink()" height="100px" name="avatar" id="avatar" title="avatar">
+    </p>
+<p><b>Name:   </b> <label  SIZE="100" id="yourname">
+</p>
+<p><b>Address: </b> <label  SIZE="100" id="address">
+</p>
+<p><b>Phone: </b> <label  SIZE="100" id="phone">
+</p>
+<p><b>email: </b> <label  SIZE="100" id="email"></p>
+<p><b>country: </b> <label  SIZE="100" id="country">
+</p>
+
+
+        </div>
+
+        <div class="col-sm-6" style="background-color:lavender;">
+            {{{QR}}}
+        </div>
+
+
+<script>
+    function setLink(){
+        location.href = localStorage.getItem('avatar');
+    }
+    window.onload = function(){
+        document.getElementById("avatar").src = localStorage.getItem('avatar');
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../public/scripts/dashboard.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

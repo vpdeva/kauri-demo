@@ -1,0 +1,67 @@
+{
+  "name": "kauri-demo",
+  "engines": {
+    "node": "8.9.4"
+  },
+  "version": "0.6.1",
+  "description": "App for interacting with uport profiles and attestations",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "dist",
+    "src",
+    "tutorial"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build:es5": "./node_modules/.bin/babel src -d lib",
+    "build:browser": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build": "yarn build:es5 && yarn test && yarn build:browser",
+    "build:docs:html": "./node_modules/.bin/jsdoc src/* README.md -d docs",
+    "build:docs:md": "./node_modules/jsdoc-to-markdown/bin/cli.js src/* > DOCS.md",
+    "build:docs": "npm run build:docs:html && npm run build:docs:md",
+    "prepublish": "yarn build",
+    "start": "node app.js"
+  },
+  "author": "Vishnu Devarajan <me@vishnudevarajan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "body-parser": "^1.17.1",
+    "ethjs-util": "^0.1.3",
+    "express": "^4.15.2",
+    "hbs": "^4.0.1",
+    "jest": "^18.1.0",
+    "jsdoc": "^3.4.3",
+    "jsdoc-to-markdown": "^1.3.7",
+    "json-loader": "^0.5.4",
+    "jsontokens": "^0.7.6",
+    "mnid": "^0.1.1",
+    "mockdate": "^2.0.1",
+    "nets": "^3.2.0",
+    "nock": "^9.0.6",
+    "tweetnacl": "^1.0.0",
+    "tweetnacl-util": "^0.15.0",
+    "uport": "^0.6.2",
+    "uport-connect": "^0.7.2",
+    "uport-lite": "^1.0.0",
+    "web3": "^1.0.0-beta.34",
+    "webpack": "^1.14.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/nock"
+    ]
+  },
+  "devDependencies": {}
+}
