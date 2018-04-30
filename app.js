@@ -14,7 +14,7 @@ var credentials = new uport.Credentials({
   appName: 'Kauri-Id',
   address: '2ogA1tvwEU4e1VDKQ3TX9CEfxX5jb5Rhzsg',
   signer: signer
-  //networks: {'0x4': {'registry' : '0x2cc31912b2b0f3075a87b3640923d45a26cef3ee', 'rpcUrl' : 'https://rinkeby.infura.io'}}
+  // networks: {'0x4': {'registry' : '0x2cc31912b2b0f3075a87b3640923d45a26cef3ee', 'rpcUrl' : 'https://rinkeby.infura.io'}}
   // Note: we use Rinkeby by default, the above is the explicit format for selecting a network
 })
 
